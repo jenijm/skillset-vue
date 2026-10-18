@@ -1,0 +1,106 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #172033;
+  background: #f4f7f6;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+body { min-width: 320px; min-height: 100vh; margin: 0; }
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 12% 12%, rgba(66, 184, 131, .14), transparent 28%),
+    radial-gradient(circle at 88% 88%, rgba(53, 73, 94, .09), transparent 30%),
+    #f4f8f6;
+}
+
+.card {
+  width: min(100%, 580px);
+  padding: 56px 38px;
+  border: 1px solid #deebe5;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, .95);
+  box-shadow: 0 24px 65px rgba(32, 72, 55, .1);
+  text-align: center;
+}
+
+.vue-mark {
+  position: relative;
+  width: 104px;
+  height: 88px;
+  margin: 0 auto 25px;
+}
+
+.outer-v, .inner-v {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform: translateX(-50%);
+}
+
+.outer-v {
+  border-top: 82px solid #42b883;
+  border-left: 51px solid transparent;
+  border-right: 51px solid transparent;
+}
+
+.inner-v {
+  border-top: 51px solid #35495e;
+  border-left: 31px solid transparent;
+  border-right: 31px solid transparent;
+}
+
+.label {
+  margin: 0 0 12px;
+  color: #299a69;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+
+h1 {
+  margin: 0;
+  color: #172033;
+  font-size: clamp(34px, 8vw, 52px);
+  line-height: 1.15;
+  letter-spacing: -.045em;
+}
+
+.description {
+  max-width: 430px;
+  margin: 18px auto 0;
+  color: #6f7d78;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 28px;
+  padding: 9px 14px;
+  border-radius: 999px;
+  color: #237748;
+  background: #eaf8f0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.status i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #32a866;
+}
+
+@media (max-width: 500px) {
+  .card { padding: 43px 22px; }
+}
